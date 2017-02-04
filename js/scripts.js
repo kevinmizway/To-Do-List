@@ -13,10 +13,12 @@ $(function() {
 
         var newTask = new task(name, details);
 
-        $("#input-task").append("<li>" + newTask.name + "</li>");
+        $("#input-task").append("<li><span class='task'>" + newTask.name + "</span></li>");
 
+        $(".task").click(function() {
+
+            $(this).parent().remove();
+
+        });
     });
-
-
-
 });
